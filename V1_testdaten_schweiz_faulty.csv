@@ -1,0 +1,51 @@
+Vorname;Name;Firma;Strasse;Hausnummer;Postleitzahl;Ortschaft
+Mia;Schneider;;Schulweg;HouseNo;3000;Bern
+Noah;Müller;TechCorp AG;Bahnhofstrasse;HouseNo;468;St. Gallen
+;Schulz;TechCorp AG;Dorfplatz;;4500;Solothurn
+Lea;;;Dorfplatz;89;4500;Solothurn
+Lina;;NetValue AG;Bahnhofstrasse;91;1200;Genf
+Elias;;;Schulweg;11;7000;Chur
+Mia;Koch;MarketMakers AG;Schulweg;20;5000;Aarau
+Noah;Meyer;;Birkenstrasse;24;4000;Basel
+Elias;Schmidt;NetValue AG;Hauptstrasse;;879;Luzern
+;;;Dorfplatz;;9000;
+Elias;Koch;GreenTech GmbH;Schulweg@123;67;7000;Chur
+Elias;Weber;EcoSystems SA;Birkenstrasse;20;5000;Aarau
+Noah;Schneider;;Seestrasse;1;6000;Luzern
+Finn;;;Bahnhofstrasse;58;8000;Zürich
+Sofia;Fischer;NetValue AG;@123;11;1200;
+Noah;Schneider;;Dorfplatz;85;8000;Zürich
+Sofia;Schneider;FinSolutions GmbH;Dorfplatz;;9000;St. Gallen
+Lina;Meyer;SwissEnergy SA;Sonnenweg;;146;Bern
+Luca;Fischer;SwissEnergy SA;Hauptstrasse@123;;6000;Luzern
+Lea;Weber;GreenTech GmbH;Bahnhofstrasse;HouseNo;4000;Basel
+Sofia;Wagner;;Birkenstrasse@123;66;496;Schaffhausen
+Luca;Schmidt;;Bahnhofstrasse;28;8000;Zürich
+Lina;Müller;;Bahnhofstrasse;42;333;Aarau
+;Wagner;;Seestrasse;6;3000;Bern
+Emma;Weber;GreenTech GmbH;Hauptstrasse;17;3000;Bern
+Noah;Müller;;;;4000;Basel
+;Weber;;Dorfplatz;80;4000;Basel
+Finn;Schneider;FinSolutions GmbH;Birkenstrasse;14;8200;Schaffhausen
+Emma;Schneider;;Schulweg;66;8000;Zürich
+Lea;Fischer;;Sonnenweg;91;356;Chur
+Lea;Schulz;EcoSystems SA;Rosenweg;64;5000;Aarau
+Lea;Fischer;;Schulweg;;6000;Luzern
+Lina;Meyer;;Dorfplatz;;9000;St. Gallen
+Lina;Wagner;;Rosenweg;38;7000;Chur
+Emma;Meyer;;Schulweg;21;643;Luzern
+;Weber;;;6;8000;Zürich
+Lea;Schulz;;Sonnenweg;94;4500;Solothurn
+Luca;Meyer;;Rosenweg;42;4000;Basel
+Liam;Schneider;;Rosenweg;47;5000;Aarau
+;Müller;TechCorp AG;Bahnhofstrasse;;6000;Luzern
+Emma;Meyer;FinSolutions GmbH;Birkenstrasse;94;448;Schaffhausen
+Finn;Koch;;Sonnenweg;;925;Aarau
+Finn;Weber;;Seestrasse;57;8000;Zürich
+Liam;Wagner;FinSolutions GmbH;Seestrasse;65;4000;Basel
+Finn;Schulz;MarketMakers AG;Rosenweg;39;8200;Schaffhausen
+;Becker;;Rosenweg;HouseNo;7000;Chur
+Emma;Schneider;TechCorp AG;;53;5000;Aarau
+Sofia;;;Schulweg;16;8200;Schaffhausen
+;Meyer;EcoSystems SA;;;5000;
+Mia;;;;93;7000;Chur
