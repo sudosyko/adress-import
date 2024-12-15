@@ -36,7 +36,23 @@ namespace adress_import
             {
                 return;
             }
-            CsvDataGrid.ItemsSource = adresses;
+
+            CsvDataGrid.Columns.Clear();
+            
+
+            for (int i = 0; i < adresses[0].Count(); i++)
+            {
+                CsvDataGrid.Columns.Add(new DataGridTextColumn
+                {
+                    Header = adresses[0][i],
+                    Binding = new Binding($"[{i}]")
+                });
+            }
+
+            for (int i = 1; i < adresses.Count; i++)
+            {
+                CsvDataGrid.Items.Add(adresses[i]);
+            }
         }
 
         public string getFilePath()
@@ -74,13 +90,13 @@ namespace adress_import
 
             foreach (string row in rows.Take(1))
             {
-                string[] values = row.Split(",");
+                string[] values = row.Split(";");
                 columns = values.Count();
             }
 
-            foreach (string row in rows.Skip(1))
+            foreach (string row in rows)
             {
-                string[] values = row.Split(",");
+                string[] values = row.Split(";");
                 bool empty = false;
 
                 if (values.Length > 0)

@@ -54,7 +54,7 @@
                 <DataGrid 
                     x:Name="CsvDataGrid" 
                     AutoGenerateColumns="True" 
-                    IsReadOnly="True" 
+                    IsReadOnly="False" 
                     Background="#333" 
                     Foreground="White" 
                     RowBackground="#2C2C2C" 
