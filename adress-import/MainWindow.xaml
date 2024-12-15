@@ -19,7 +19,7 @@
         <TextBlock Text="Adressen Importer" FontSize="24" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Margin="0,10,0,20"/>
 
         <!-- Datei-Auswählen Button -->
-        <Button Content="Datei Auswählen" Width="200" Height="40" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#444" Foreground="White" Click="OnFileSelectClick"/>
+        <Button Click="importAdress_click" Width="200" Height="40" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#444" Foreground="White"/>
 
         <!-- Dynamische Inhalte nach Datei-Auswahl -->
         <StackPanel Grid.Row="1" Margin="0,70,0,0" Visibility="Collapsed" x:Name="ContentPanel">
@@ -39,7 +39,7 @@
             </UniformGrid>
 
             <!-- CSV-Import Button -->
-            <Button Content="CSV Importieren" Width="200" Height="40" HorizontalAlignment="Center" Background="#444" Foreground="White" Click="OnImportClick"/>
+            <Button Content="CSV Importieren" Width="200" Height="40" HorizontalAlignment="Center" Background="#444" Foreground="White" />
         </StackPanel>
     </Grid>
 </Window>

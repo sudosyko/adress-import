@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using Microsoft.Win32;
+using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Windows;
@@ -18,9 +19,40 @@ namespace adress_import
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<string[]> adresses;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        public void importAdress_click(object sender, RoutedEventArgs e)
+        {
+            string csvFilePath = getFilePath();
+            try 
+            {
+                adresses = importCSV(csvFilePath);
+            } catch (Exception ex) 
+            {
+                return;
+            }
+            CsvDataGrid.ItemsSource = adresses;
+        }
+
+        public string getFilePath()
+        {
+            string filePath = "";
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.InitialDirectory = "c:\\";
+            openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            openFileDialog.FilterIndex = 2;
+            openFileDialog.RestoreDirectory = true;
+
+            openFileDialog.ShowDialog();
+            filePath = openFileDialog.FileName;
+
+            return filePath;
         }
 
         /*
@@ -32,13 +64,21 @@ namespace adress_import
          * 
          * filtering
         */
-        public List<string[]> importCSV(string csvFilePath, int columns)
+        public List<string[]> importCSV(string csvFilePath)
         {
             List<string[]> csv = new List<string[]>();
 
             string[] rows = File.ReadAllLines(csvFilePath);
 
-            foreach (string row in rows)
+            int columns = 0;
+
+            foreach (string row in rows.Take(1))
+            {
+                string[] values = row.Split(",");
+                columns = values.Count();
+            }
+
+            foreach (string row in rows.Skip(1))
             {
                 string[] values = row.Split(",");
                 bool empty = false;
