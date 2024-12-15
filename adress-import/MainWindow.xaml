@@ -11,25 +11,58 @@
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <!-- Titel -->
-        <TextBlock Text="Adressen Importer" FontSize="24" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Margin="0,10,0,20"/>
+        <TextBlock 
+            Grid.Row="0"
+            Text="Adressen Importer" 
+            FontSize="24" 
+            FontWeight="Bold" 
+            Foreground="White" 
+            HorizontalAlignment="Center" 
+            Margin="0,10,0,20"/>
 
         <!-- Datei-Auswählen Button -->
-        <Button Click="importAdress_click" Width="200" Height="40" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#444" Foreground="White"/>
+        <Button 
+            Grid.Row="1"
+            Click="importAdress_click"
+            Width="200" Height="40" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Top" 
+            Background="#444" 
+            Foreground="White"/>
 
         <!-- Dynamische Inhalte nach Datei-Auswahl -->
-        <StackPanel Grid.Row="1" Margin="0,70,0,0" Visibility="Collapsed" x:Name="ContentPanel">
+        <StackPanel 
+            Grid.Row="2" 
+            Margin="0,70,0,0" 
+            x:Name="ContentPanel">
             <!-- Tabelle mit CSV-Inhalten -->
-            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Height="200" Margin="0,0,0,20">
-                <DataGrid x:Name="CsvDataGrid" AutoGenerateColumns="True" IsReadOnly="True" Background="#333" Foreground="White" RowBackground="#2C2C2C" AlternatingRowBackground="#444"/>
+            <ScrollViewer 
+                HorizontalScrollBarVisibility="Auto" 
+                VerticalScrollBarVisibility="Auto" 
+                Height="200" 
+                Margin="0,0,0,20">
+                <DataGrid 
+                    x:Name="CsvDataGrid" 
+                    AutoGenerateColumns="True" 
+                    IsReadOnly="True" 
+                    Background="#333" 
+                    Foreground="White" 
+                    RowBackground="#2C2C2C" 
+                    AlternatingRowBackground="#444"/>
             </ScrollViewer>
 
             <!-- Datenbanktabellen Auswahl -->
-            <UniformGrid Columns="6" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,20">
+            <UniformGrid Grid.Row="3" Columns="6" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,20">
                 <Button Content="Vorname" Background="#444" Foreground="White"/>
                 <Button Content="Name" Background="#444" Foreground="White"/>
                 <Button Content="Firma" Background="#444" Foreground="White"/>
@@ -39,7 +72,7 @@
             </UniformGrid>
 
             <!-- CSV-Import Button -->
-            <Button Content="CSV Importieren" Width="200" Height="40" HorizontalAlignment="Center" Background="#444" Foreground="White" />
+            <Button Grid.Row="4"  Content="CSV Importieren" Width="200" Height="40" HorizontalAlignment="Center" Background="#444" Foreground="White" />
         </StackPanel>
     </Grid>
 </Window>
