@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:adress_import"
         mc:Ignorable="d"
         Title="Adressen Importer" 
-        Width="800" Height="600" Background="#2C2C2C" ResizeMode="CanResizeWithGrip">
+        Width="1200" Height="600" Background="#2C2C2C" ResizeMode="CanResizeWithGrip">
     
     <Grid Margin="10">
         <Grid.RowDefinitions>
@@ -33,12 +33,14 @@
         <!-- Datei-Auswählen Button -->
         <Button 
             Grid.Row="1"
+            Content="Datei Auswählen..."
             Click="importAdress_click"
-            Width="200" Height="40" 
+            Width="120" Height="30" 
             HorizontalAlignment="Center" 
             VerticalAlignment="Top" 
             Background="#444" 
             Foreground="White"/>
+
 
         <!-- Dynamische Inhalte nach Datei-Auswahl -->
         <StackPanel 
@@ -54,22 +56,106 @@
                 <DataGrid 
                     x:Name="CsvDataGrid" 
                     AutoGenerateColumns="True" 
-                    IsReadOnly="False" 
                     Background="#333" 
                     Foreground="White" 
                     RowBackground="#2C2C2C" 
                     AlternatingRowBackground="#444"/>
             </ScrollViewer>
 
-            <!-- Datenbanktabellen Auswahl -->
-            <UniformGrid Grid.Row="3" Columns="6" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,20">
-                <Button Content="Vorname" Background="#444" Foreground="White"/>
-                <Button Content="Name" Background="#444" Foreground="White"/>
-                <Button Content="Firma" Background="#444" Foreground="White"/>
-                <Button Content="Strasse" Background="#444" Foreground="White"/>
-                <Button Content="Hausnummer" Background="#444" Foreground="White"/>
-                <Button Content="Ort" Background="#444" Foreground="White"/>
+            <UniformGrid Grid.Row="3" Columns="7" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,20">
+                <!-- Spalte 1 -->
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <TextBox Width="150" Height="30" Text="Vorname" BorderBrush="Black" BorderThickness="1" TextAlignment="Center" IsReadOnly="True" />
+                    <ComboBox Width="150" Height="30" Background="#444" Foreground="Black">
+                        <ComboBoxItem Content="Spalte 1" IsSelected="True" Foreground="Gray" />
+                        <ComboBoxItem Content="Spalte 2" />
+                        <ComboBoxItem Content="Spalte 3" />
+                        <ComboBoxItem Content="Spalte 4" />
+                        <ComboBoxItem Content="Spalte 5" />
+                        <ComboBoxItem Content="Spalte 6" />
+                        <ComboBoxItem Content="Spalte 7" />
+                    </ComboBox>
+                </StackPanel>
+                <!-- Spalte 2 -->
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <TextBox Width="150" Height="30" Text="Name" BorderBrush="Black" BorderThickness="1" TextAlignment="Center" IsReadOnly="True" />
+                    <ComboBox Width="150" Height="30" Background="#444" Foreground="Black">
+                        <ComboBoxItem Content="Spalte 1" />
+                        <ComboBoxItem Content="Spalte 2" IsSelected="True" Foreground="Gray" />
+                        <ComboBoxItem Content="Spalte 3" />
+                        <ComboBoxItem Content="Spalte 4" />
+                        <ComboBoxItem Content="Spalte 5" />
+                        <ComboBoxItem Content="Spalte 6" />
+                        <ComboBoxItem Content="Spalte 7" />
+                    </ComboBox>
+                </StackPanel>
+                <!-- Spalte 3 -->
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <TextBox Width="150" Height="30" Text="Firma" BorderBrush="Black" BorderThickness="1" TextAlignment="Center" IsReadOnly="True" />
+                    <ComboBox Width="150" Height="30" Background="#444" Foreground="Black">
+                        <ComboBoxItem Content="Spalte 1" />
+                        <ComboBoxItem Content="Spalte 2" />
+                        <ComboBoxItem Content="Spalte 3" IsSelected="True" Foreground="Gray" />
+                        <ComboBoxItem Content="Spalte 4" />
+                        <ComboBoxItem Content="Spalte 5" />
+                        <ComboBoxItem Content="Spalte 6" />
+                        <ComboBoxItem Content="Spalte 7" />
+                    </ComboBox>
+                </StackPanel>
+                <!-- Spalte 4 -->
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <TextBox Width="150" Height="30" Text="Strasse" BorderBrush="Black" BorderThickness="1" TextAlignment="Center" IsReadOnly="True" />
+                    <ComboBox Width="150" Height="30" Background="#444" Foreground="Black">
+                        <ComboBoxItem Content="Spalte 1" />
+                        <ComboBoxItem Content="Spalte 2" />
+                        <ComboBoxItem Content="Spalte 3" />
+                        <ComboBoxItem Content="Spalte 4" IsSelected="True" Foreground="Gray" />
+                        <ComboBoxItem Content="Spalte 5" />
+                        <ComboBoxItem Content="Spalte 6" />
+                        <ComboBoxItem Content="Spalte 7" />
+                    </ComboBox>
+                </StackPanel>
+                <!-- Spalte 5 -->
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <TextBox Width="150" Height="30" Text="Hausnummer" BorderBrush="Black" BorderThickness="1" TextAlignment="Center" IsReadOnly="True" />
+                    <ComboBox Width="150" Height="30" Background="#444" Foreground="Black">
+                        <ComboBoxItem Content="Spalte 1" />
+                        <ComboBoxItem Content="Spalte 2" />
+                        <ComboBoxItem Content="Spalte 3" />
+                        <ComboBoxItem Content="Spalte 4" />
+                        <ComboBoxItem Content="Spalte 5" IsSelected="True" Foreground="Gray" />
+                        <ComboBoxItem Content="Spalte 6" />
+                        <ComboBoxItem Content="Spalte 7" />
+                    </ComboBox>
+                </StackPanel>
+                <!-- Spalte 6 -->
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <TextBox Width="150" Height="30" Text="PLZ" BorderBrush="Black" BorderThickness="1" TextAlignment="Center" IsReadOnly="True" />
+                    <ComboBox Width="150" Height="30" Background="#444" Foreground="Black">
+                        <ComboBoxItem Content="Spalte 1" />
+                        <ComboBoxItem Content="Spalte 2" />
+                        <ComboBoxItem Content="Spalte 3" />
+                        <ComboBoxItem Content="Spalte 4" />
+                        <ComboBoxItem Content="Spalte 5" />
+                        <ComboBoxItem Content="Spalte 6" IsSelected="True" Foreground="Gray" />
+                        <ComboBoxItem Content="Spalte 7" />
+                    </ComboBox>
+                </StackPanel>
+                <!-- Spalte 7 -->
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <TextBox Width="150" Height="30" Text="Ortschaft" BorderBrush="Black" BorderThickness="1" TextAlignment="Center" IsReadOnly="True" />
+                    <ComboBox Width="150" Height="30" Background="#444" Foreground="Black">
+                        <ComboBoxItem Content="Spalte 1" />
+                        <ComboBoxItem Content="Spalte 2" />
+                        <ComboBoxItem Content="Spalte 3" />
+                        <ComboBoxItem Content="Spalte 4" />
+                        <ComboBoxItem Content="Spalte 5" />
+                        <ComboBoxItem Content="Spalte 6" />
+                        <ComboBoxItem Content="Spalte 7" IsSelected="True" Foreground="Gray" />
+                    </ComboBox>
+                </StackPanel>
             </UniformGrid>
+
 
             <!-- CSV-Import Button -->
             <Button Grid.Row="4"  Content="CSV Importieren" Width="200" Height="40" HorizontalAlignment="Center" Background="#444" Foreground="White" />
