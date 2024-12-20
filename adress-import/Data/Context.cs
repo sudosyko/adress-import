@@ -14,7 +14,7 @@ namespace adress_import.Data
         public DbSet<Adressen> Adressen { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=Localhost;Database=adress_import;Trusted_Connection=true;TrustedCertificate=true");
+            optionsBuilder.UseSqlServer("Server=Localhost;Database=adress_import;Trusted_Connection=true;TrustServerCertificate=true");
             base.OnConfiguring(optionsBuilder);
         }
 
