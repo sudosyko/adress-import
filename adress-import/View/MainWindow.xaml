@@ -33,6 +33,7 @@
         <!-- Datei-Auswählen Button -->
         <Button 
             Grid.Row="1"
+            Content="Datei Auswählen"
             Click="importAdress_click"
             Width="200" Height="40" 
             HorizontalAlignment="Center" 
